@@ -1,0 +1,33 @@
+<html><!DOCTYPE html>
+<html>
+<head>
+	<title>Computed property in Vue</title>
+</head>
+<body>
+	<div id="app">
+		<h1>Skill: {{ skill }}</h1>
+		<input type="text" v-model="points" />
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				points: 300,
+			},
+			computed: {
+				skill: function() {
+					if (this.points <= 100) {
+						return 'Beginner';
+					} else {
+						return 'Advanced';
+					}
+				}
+			}
+		})
+	</script>
+
+</body>
+</html></html>
