@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs - lists</title>
+	<style type="text/css">
+		.completed {
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li :class="{ 'completed' : task.completed }" 
+				v-for="task in tasks"
+				@click="toggleCompletedFor(task)"
+			> 
+				{{ task.body }} 
+			</li>
+		</ul>
+		
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
